@@ -101,9 +101,9 @@
             </li>
             <li class="list-group-item d-flex justify-content-between lh-condensed">
               <div>
-                <h5 class="my-0" id="totalProductos">Total</h5>
+                <h5 class="my-0" id="totalPrecio">Total</h5>
               </div>
-              <span class="text-muted" id="productosTotal">$0 </span>
+              <span class="text-muted" id="precioTotal">$0 </span>
             </li>
           </ul>
     
@@ -111,6 +111,10 @@
         </div>
         <div class="col-md-8 order-md-1">
           <h4 class="mb-3">Agregar Productos</h4>
+          <div class="alert alert-danger fade show" style="display:none;"
+                                                       role="alert" id="alertValidaciones">
+            <p id="alertValidacionesTexto"></p>
+      </div>
           <form class="needs-validation" novalidate>
             <div class="row">
               <div class="col-md-6 mb-3">
@@ -119,6 +123,7 @@
                 <div class="invalid-feedback">
                   Nombre inválido
                 </div>
+
               </div>
               <div class="col-md-6 mb-3">
                 <label for="Number">Cantidad</label>
@@ -132,7 +137,7 @@
             <hr class="mb-4">
             
             <!-- Insertar tabla aquí -->
-            <table class="table">
+            <table class="table" id="tablaListaCompras">
               <thead>
                 <tr>
                   <th scope="col">#</th>
